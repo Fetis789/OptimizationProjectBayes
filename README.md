@@ -1,2 +1,16 @@
-# OptimizationProjectBayes
-Notes, codes and graphics used for research of different types of bayesian optimization.
+# Байесовская оптимизация гиперпараметров
+
+Проект по курсу «Методы оптимизации». Сравнение методов байесовской оптимизации (гауссовский процесс и TPE) со случайным поиском для подбора гиперпараметров моделей машинного обучения.
+
+## 🧪 Эксперименты
+
+- **5 датасетов:** Adult, Bank Marketing, Spambase (классификация), California Housing, Superconductivity (регрессия).
+- **Модели:** LogisticRegression, Ridge, Lasso, ElasticNet, RandomForest, CatBoost, LightGBM.
+- **Методы оптимизации:** Gaussian Process (scikit-optimize), TPE (Optuna), Random Search.
+- **Бюджет:** 50–100 итераций, кросс-валидация 3 или 5 фолдов.
+
+## 📈 Основные результаты
+
+- **Регрессия:** GP опережает TPE и Random Search на ансамблевых моделях (RandomForest, CatBoost) на 3–4%.
+- **Дискретные пространства:** TPE лучше GP; при чисто категориальных параметрах случайный поиск не уступает байесовским методам.
+- **Классификация:** все три метода дают практически одинаковый ROC-AUC — модели близки к насыщению.
